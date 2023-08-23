@@ -1,0 +1,43 @@
+nav {
+    padding: 10px;
+    background-color: #333445;
+}
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+.header-container{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #333445;
+    align-items: center;
+    gap: 10%;
+}
+
+.header-img img{
+    height: 300px;
+}
+table {
+    text-align: center;
+    color: white;
+}
+table #title-name {
+    font-size: 48px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+table #role {
+    font-size: 34px;
+}

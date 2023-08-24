@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 nav {
     padding: 10px;
     background-color: #333445;
@@ -15,7 +19,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: white;
+    color: #ffae28;
 }
 .header-container{
     display: flex;
@@ -34,10 +38,96 @@ table {
     color: white;
 }
 table #title-name {
-    font-size: 48px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+    font-family: 'Notable', sans-serif;
+}
+#hello {
+    font-size: 24px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+table #role {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
 }
 
-table #role {
-    font-size: 34px;
+table tr td button {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+background-color: #ffae28;
+width: 120px;
+padding: 10px;
+border-radius: 20px;
+list-style: none;
+cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffc464;
+}
+#about {
+    display: flex;
+    gap: 5%;
+    padding: 10px;
+    justify-content: center;
+    background-color: #252534;
+    color: white;
+}
+section img {
+    width: 300px;
+}
+.description {
+    max-width: 60%;
+    text-align:justify;
+}
+#project {
+    background-color: #333445;
+}
+#project > h1 {
+    color: white;
+    margin: 0;
+    padding: 30px 0px;
+    text-align: center;
+}
+#project-container {
+    padding: 20px 30px;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    background-color: #333445;
+}
+
+.project-box {
+    box-sizing: border-box;
+    align-items: center;
+    padding: 20px;
+    background-color: #5b5c71;
+}
+.project-box:hover {
+   background-color: #9395ac;
+}
+
+.project-box img {
+    width: 230px;
+}
+
+.project-box h1 {
+   color: white;
+   text-align: center;
+   margin: 0;
+   padding-bottom: 20px;
+
+}
+.button {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+}
+.button button{
+
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    background-color: #ffae28;
+    color: white;
 }

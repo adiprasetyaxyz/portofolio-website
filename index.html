@@ -26,19 +26,21 @@
         <div>
             <table>
                 <tr>
-                    <td id="hello" colspan="2">hello, iam</td>
+                    <td id="hello">hello, iam</td>
                 </tr>
                 <tr>
-                    <td id="title-name" colspan="2">Adi Prasetyawan</td>
+                    <td id="title-name">Adi Prasetyawan</td>
                 </tr>
                 <tr>
-                    <td id="role" colspan="2">Fullstack Web Developer</td>
+                    <td id="role">Fullstack Web Developer</td>
                 </tr>
                 <tr>
-                    <td><button>CV</button></td>
-                    <td><button>Hire Me</button></td>
+                    <td> 
+                        <span><button>CV</button></span>
+                        <span><button>Hire Me</button></span>
+                    </td>
                 </tr>
-                
+               
             </table>
         </div>
     </div>
@@ -50,11 +52,27 @@
     <article id="about">
         <section class="description">
         <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>My Name is Adi Prasetyawan I was born in 1998 Denpasar, and after completing my education at the high school level, life began to teach me many new things. Currently, I am on an exciting journey to reach my dream of becoming a software developer.</p>
+        <p>I've always felt a strong pull towards the world of technology and computers from a young age. This passion led me to make a serious decision to step into the field of software development. Right now, I'm fully focused on the learning process, striving to grasp programming languages, application concepts, and all the technical aspects that will help me succeed in this industry.</p>
+        <p>Throughout this journey, I've come to understand that learning never truly ends. While my ultimate goal is to become a proficient professional in software development, I'm also learning to appreciate every moment in this process. With unwavering determination and endless enthusiasm, I believe that success as a software developer is only a matter of time and the dedication I invest. I'm currently writing the story of my life in the world of technology, and I'm very excited to see how these pages will fill up with new achievements I'll attain.
+        </p>
         <h2>Skill</h2>
+        <table id="skill">
+            <tr>
+                <th>HTML</th>
+                <td>: &#9733; &#9733; &#9733; &#9733; &#9734;</td>
+            </tr>
+            <tr>
+                <th>CSS</th>
+                <td>: &#9733; &#9733; &#9733; &#9733; &#9734;</td>
+            </tr>
+            <tr>
+                <th>Javascript</th>
+                <td>: &#9733; &#9733; &#9734; &#9734; &#9734;</td>
+            </tr>
+        </table>
         </section>
-        <section> <img src="assets/img/Profile2.png" alt="foto"></section>
+        <section class="img-content"> <img src="assets/img/Profile2.png" alt="foto"></section>
     </article>
     
     <article id="project">
@@ -88,15 +106,49 @@
         </div>
     </article>
     <article id="contact">
-        <h1>Contact</h1>
-        <div><input type="text"></div>
+        <h1>Leave Me Messages</h1>
+        <div class="contact-container">
+            <form  action="https://formspree.io/f/xgejkrej"
+            method="POST">
+                <span>    
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name">
+                </span>
+                <span>    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com">
+                </span>
+                <span>    
+                    <label for="message">Messages</label>
+                    <textarea name="message" id="message" placeholder="Write Your message here"> </textarea>
+                </span>
+                <span class="submit">
+                    <button type="submit" id="submit">Send</button>
+                </span>
+                </form>
         
+        </div>
+        <p>Or find me at :</p>
+        <div class="icon">
+            <span><a href=""><img src="assets/img/github.png" alt="github"></a></span>
+            <span><a href=""><img src="assets/img/linkedin.png" alt="linkedin"></a></span>
+            <span><a href=""><img src="assets/img/gmail.png" alt=""></a></span>
+        </div>
 
     </article>
-    <aside>
-   
-    </aside>
 </div>
+    <aside>
+        <div class="sosmed">    
+            <ul>
+                <li><a href="facebook.com"><img src="assets/img/facebook.png" alt="facebook"></a></li>
+                <li><a href="instagram.com"><img src="assets/img/instagram.png" alt="instagram"></a></li>
+                <li><a href="twitter.com"><img src="assets/img/twitter.png" alt="twitter"></a></li>
+            </ul>  
+        </div>
+    </aside>
 </main> 
 </body>
+<footer>
+    <p>Made with Love &copy; 2023 By Adi Prasetyawan</p>
+</footer>
 </html>

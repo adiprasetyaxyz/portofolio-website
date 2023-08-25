@@ -1,10 +1,32 @@
+:root {
+    --main-bg-color: #252534;
+    --second-bg-color: #333445;
+    --accent-color: #ffae28;
+    --box-gradient: linear-gradient(135deg,  #5b5c71, #888a9f, #5b5c71);
+}
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--main-bg-color);
+    color: white;
+}
+
+body h1 {
+    color: white;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.icon img {
+    width: 30px;
 }
 nav {
     padding: 10px;
-    background-color: #333445;
+    background-color: var(--second-bg-color);
 }
 nav ul {
     display: flex;
@@ -19,19 +41,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffae28;
+    color: var(--accent-color);
 }
 .header-container{
     display: flex;
     justify-content: center;
-    padding: 40px;
-    background-color: #333445;
+    padding: 40px 0;
+    background-color: var(--second-bg-color);
     align-items: center;
     gap: 10%;
 }
 
 .header-img img{
-    height: 300px;
+   max-width:300px;
 }
 table {
     text-align: center;
@@ -50,37 +72,46 @@ table #role {
 }
 
 table tr td button {
-    margin-top: 20px;
+    margin: 20px 10px;
     color: white;
     font-size: 18px;
-background-color: #ffae28;
+    border: none;
+background-color: var(--accent-color);
 width: 120px;
 padding: 10px;
 border-radius: 20px;
 list-style: none;
 cursor: pointer;
 }
+#skill{
+    text-align: left;
+    padding-right: 20px;
+}
+#skill td {
+    color: #ffae28;
+    font-size: 20px;
+}
 
 button:hover {
-    background-color: #ffc464;
+    background-color: #ff951d;
 }
 #about {
     display: flex;
     gap: 5%;
-    padding: 10px;
     justify-content: center;
-    background-color: #252534;
+    background-color: var(--main-bg-color);
     color: white;
+    padding: 4% 7%;
 }
-section img {
+.img-content img {
     width: 300px;
+    padding-top: 78px;
 }
 .description {
-    max-width: 60%;
     text-align:justify;
 }
 #project {
-    background-color: #333445;
+    background-color: var(--second-bg-color);
 }
 #project > h1 {
     color: white;
@@ -89,25 +120,33 @@ section img {
     text-align: center;
 }
 #project-container {
-    padding: 20px 30px;
+    padding: 40px;
+    padding-bottom: 10%;
     display: flex;
     gap: 5%;
     justify-content: center;
-    background-color: #333445;
+    background-color: var(--second-bg-color);
+    align-items: center;
+    
+
 }
 
 .project-box {
+    max-width: 100%;
     box-sizing: border-box;
     align-items: center;
     padding: 20px;
-    background-color: #5b5c71;
+    background: linear-gradient(135deg,  #5b5c71, #888a9f, #5b5c71);
+    border-radius: 10px;
+    justify-content: center;
 }
 .project-box:hover {
-   background-color: #9395ac;
+    background:  linear-gradient(135deg, var(--accent-color), #fab74a,var(--accent-color));
 }
 
 .project-box img {
     width: 230px;
+    
 }
 
 .project-box h1 {
@@ -124,10 +163,241 @@ section img {
     justify-content: center;
 }
 .button button{
-
+    
+    cursor: pointer;
     padding: 10px;
     border-radius: 20px;
     width: 100px;
-    background-color: #ffae28;
+   background-color: #8b8db0;
+    color: black;
+    border: none;
+}
+
+.button button:hover {
+    background-color: white;
+}
+#contact {
+    padding: 40px 0;
+    text-align: center;
+}
+.contact-container{
+display: flex;
+justify-content: center;
+padding: 40px 0;
+}
+
+.contact-container form{
+    background: var(--box-gradient);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+}
+
+.contact-container form input{
+    width: 100%;
+    max-width: 600px;
+    border: 0;
+    border-radius: 2px;
+    background-color: var(--second-bg-color);
+    color: white;
+    height: 25px;
+}
+
+.contact-container form input::after {
+    background-color: var(--second-bg-color);
     color: white;
 }
+
+form {
+    text-align: left;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    
+}
+form span {
+ display: flex;
+ justify-content: space-between;   
+ gap: 20px;
+
+}
+form label {
+    color: var(--main-bg-color);
+    width: 150px;
+}
+#submit {
+
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    background: var(--second-bg-color);
+    border: 0;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: var(--accent-color);
+}
+#message {
+    text-align: left;
+    min-height: 100px;
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--second-bg-color);
+    color: white;
+}
+
+
+.submit {
+    align-self: flex-end;
+}
+.submit button {
+    color: white;
+}
+
+.sosmed {
+    height: 100%;
+  display: flex;
+}
+main {
+    display: flex;
+}
+main aside {
+    position: fixed;
+    inset-block: 0;
+
+  }
+aside .sosmed ul {
+    
+    padding: 1.5rem 1rem;
+    margin: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--accent-color);
+    list-style: none;
+   
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    opacity: 20%;
+}
+aside .sosmed ul:hover {
+    opacity: 100%;
+}
+aside .sosmed ul img {
+    width: 40px;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+   background-color: var(--second-bg-color);
+   color: white;
+}
+@media screen and (max-width: 1000px) {
+    
+
+
+    form span {
+        display: flex;
+        flex-flow: column;
+    }
+
+    form input {
+        height: 25px;
+    }
+
+    main aside {
+        position: fixed;
+        inset-block: 0;
+    
+      }
+    aside .sosmed ul {
+        
+        padding: 1rem 0.5rem;
+        margin: auto;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: var(--accent-color);
+        list-style: none;
+       
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        opacity: 20%;
+    }
+    aside .sosmed ul:hover {
+        opacity: 100%;
+    }
+    aside .sosmed ul img {
+        width: 25px;
+    }
+
+  }
+
+@media screen and (max-width: 768px) {
+    #about {
+        flex-flow: column-reverse;
+        align-items: center;
+        padding:11%;
+    }
+    nav ul {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .header-container {
+        flex-flow: column;
+    }
+    #project-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    form span {
+        display: flex;
+        flex-flow: column;
+    }
+
+    form input {
+        height: 25px;
+    }
+
+    main aside {
+        position: fixed;
+        inset-block: 0;
+    
+      }
+    aside .sosmed ul {
+        
+        padding: 1rem 0.4rem;
+        margin: auto;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: var(--accent-color);
+        list-style: none;
+       
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        opacity: 20%;
+    }
+    aside .sosmed ul:hover {
+        opacity: 100%;
+    }
+    aside .sosmed ul img {
+        width: 25px;
+    }
+
+    .img-content img {
+        padding: 20px;
+    }
+
+  }
+   

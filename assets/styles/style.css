@@ -3,30 +3,63 @@
     --second-bg-color: #333445;
     --accent-color: #ffae28;
     --box-gradient: linear-gradient(135deg,  #5b5c71, #888a9f, #5b5c71);
+    --main-font: white;
+}
+.light-theme {
+    --main-bg-color:white;
+    --second-bg-color: #D4D4D4;
+    --accent-color: #ffae28;
+    --box-gradient: linear-gradient(135deg,  #52546D, #6a6c8a, #52546D);
+    --main-font: #252534;;
+}
+.toggle-btn {
+    background-color: var(--accent-color);
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-right: 40px;
+}
+
+.toggle-btn:hover {
+    background-color: #ff951d;
+}
+.toggle-btn img {
+    width: 20px;
 }
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--main-bg-color);
-    color: white;
+    color: var(--main-font);
 }
 
 body h1 {
-    color: white;
+    color: var(--main-font);
 }
 .icon {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
 }
 
-.icon img {
-    width: 30px;
-}
+
 nav {
     padding: 10px;
-    background-color: var(--second-bg-color);
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.8s, color 0.8s;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 nav ul {
     display: flex;
@@ -36,7 +69,7 @@ nav ul {
 
 nav ul li a {
     font-size: 24px;
-    color: white;
+    color: var(--main-font);
     text-decoration: none;
 }
 
@@ -48,6 +81,7 @@ nav ul li a:hover {
     justify-content: center;
     padding: 40px 0;
     background-color: var(--second-bg-color);
+    transition: background-color 0.8s, color 0.8s;
     align-items: center;
     gap: 10%;
 }
@@ -55,10 +89,11 @@ nav ul li a:hover {
 .header-img img{
    max-width:300px;
 }
+
 table {
     text-align: center;
-    color: white;
 }
+
 table #title-name {
     font-size: 32px;
     font-family: 'Notable', sans-serif;
@@ -73,7 +108,7 @@ table #role {
 
 table tr td button {
     margin: 20px 10px;
-    color: white;
+    color: var(--main-font);
     font-size: 18px;
     border: none;
 background-color: var(--accent-color);
@@ -100,8 +135,8 @@ button:hover {
     gap: 5%;
     justify-content: center;
     background-color: var(--main-bg-color);
-    color: white;
     padding: 4% 7%;
+    transition: background-color 0.8s, color 0.8s;
 }
 .img-content img {
     width: 300px;
@@ -112,9 +147,9 @@ button:hover {
 }
 #project {
     background-color: var(--second-bg-color);
+    transition: background-color 0.8s, color 0.8s;
 }
 #project > h1 {
-    color: white;
     margin: 0;
     padding: 30px 0px;
     text-align: center;
@@ -127,7 +162,7 @@ button:hover {
     justify-content: center;
     background-color: var(--second-bg-color);
     align-items: center;
-    
+    transition: background-color 0.8s, color 0.8s;
 
 }
 
@@ -136,12 +171,15 @@ button:hover {
     box-sizing: border-box;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(135deg,  #5b5c71, #888a9f, #5b5c71);
+    background: var(--box-gradient);
     border-radius: 10px;
     justify-content: center;
+
 }
 .project-box:hover {
     background:  linear-gradient(135deg, var(--accent-color), #fab74a,var(--accent-color));
+    transition: background-color 0.8s, color 0.8s;
+    
 }
 
 .project-box img {
@@ -150,10 +188,10 @@ button:hover {
 }
 
 .project-box h1 {
-   color: white;
    text-align: center;
    margin: 0;
    padding-bottom: 20px;
+   color: white;
 
 }
 .button {
@@ -174,7 +212,7 @@ button:hover {
 }
 
 .button button:hover {
-    background-color: white;
+    background-color: #5b5c71;
 }
 #contact {
     padding: 40px 0;
@@ -191,6 +229,7 @@ padding: 40px 0;
     padding: 20px;
     border-radius: 10px;
     width: 60%;
+    transition: background-color 0.8s, color 0.8s;
 }
 
 .contact-container form input{
@@ -199,13 +238,18 @@ padding: 40px 0;
     border: 0;
     border-radius: 2px;
     background-color: var(--second-bg-color);
-    color: white;
+    color: var(--main-font);
     height: 25px;
+    transition: background-color 0.8s, color 0.8s;
 }
 
 .contact-container form input::after {
     background-color: var(--second-bg-color);
-    color: white;
+    color: var(--main-font);
+}
+
+header {
+    display: inline;
 }
 
 form {
@@ -244,7 +288,7 @@ form label {
     width: 100%;
     max-width: 600px;
     background-color: var(--second-bg-color);
-    color: white;
+    color: var(--main-font);
 }
 
 
@@ -252,15 +296,17 @@ form label {
     align-self: flex-end;
 }
 .submit button {
-    color: white;
+    color: var(--main-font);
 }
 
 .sosmed {
     height: 100%;
   display: flex;
+  color: var(--main-font);
 }
 main {
     display: flex;
+    overflow: auto;
 }
 main aside {
     position: fixed;
@@ -281,20 +327,54 @@ aside .sosmed ul {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    opacity: 20%;
+    color: var(--main-font);
 }
 aside .sosmed ul:hover {
     opacity: 100%;
 }
-aside .sosmed ul img {
-    width: 40px;
+aside .sosmed li a {
+     text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--main-font);
+  transition: all .1s ease-in-out;
 }
 
+.icon a {
+    color: var(--main-font);
+    text-decoration: none;
+  font-size: 1.5rem;
+}
 footer {
     padding: 20px 0;
     text-align: center;
    background-color: var(--second-bg-color);
-   color: white;
+   color: var(--main-font);
+}
+
+.slide-left {
+    animation: slideleft 2s linear ;
+}
+@keyframes zoom {
+    0% {
+        width:  230px;
+    }
+    100% {
+        width: 250px;
+    }
+}
+@keyframes slideleft {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0px);
+        opacity: 100%;
+    }
 }
 @media screen and (max-width: 1000px) {
     
@@ -333,13 +413,39 @@ footer {
     aside .sosmed ul:hover {
         opacity: 100%;
     }
-    aside .sosmed ul img {
+    aside .sosmed ul a {
         width: 25px;
     }
 
   }
 
 @media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+    }
+    
+    nav ul li a {
+        font-size: 20px;
+        color: var(--main-font);
+        text-decoration: none;
+    }
+    .toggle-btn {
+        background-color: var(--accent-color);
+        width: auto;
+        padding: 5px 15px;
+        height: 20px;
+        margin-right: 0;
+     
+    }
+    .toggle-btn img {
+        width: 20px;
+    }
+
     #about {
         flex-flow: column-reverse;
         align-items: center;
